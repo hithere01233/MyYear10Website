@@ -5,7 +5,7 @@ html {
     padding: 0;
     height: 100%;
     /* The Font Family- Really important!! */
-    font-family: Arial, sans-serif;
+    font-family: Arial, Impact, Haettenschweiler, 'Arial Narrow Bold';
     box-sizing: border-box;
 }
 
@@ -16,7 +16,7 @@ img {
 
 /* The hero section styling- use your OWN Hero Image URL here */
 .hero {
-    background-image: url('images/techquitybanner-1130x160.png');
+    background-image: url('images/CharlesLeclercFerrari\ Sf-90\ 2020.png');
     height: 25vh;
     background-size: cover;
     background-position: center;
@@ -36,10 +36,10 @@ img {
 
 /* nice big font on a banner style background */
 .topic-title{
-    color: white;
-    font-size: 2em;
+    color: rgb(255, 0, 0);
+    font-size: 0.8em;
     padding: 0.1em 3em;
-    background-color: rgb(71, 71, 71);
+    background-color: rgb(75, 64, 64);
 }
 
 /* Three column grid with a nice big gap */
@@ -73,8 +73,8 @@ img {
 
 /* Styling for a footer section to take a bit of spcae at the bottom of the page */
 .footer{
-    background-color: rgb(71, 71, 71);
-    color: white;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
     text-align: right;
     padding: 3em 3em;
 }
