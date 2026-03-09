@@ -5,7 +5,7 @@ html {
     padding: 0;
     height: 100%;
     /* The Font Family- Really important!! */
-    font-family: Arial, Impact, Haettenschweiler, 'Arial Narrow Bold';
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     box-sizing: border-box;
 }
 
@@ -23,7 +23,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(255, 0, 0);
     text-align: center;
     position: relative;
 }
