@@ -1,20 +1,12 @@
-/* A simple css reset */
-body,
-html {
+/* 1. Global Reset - Fixes the overall look */
+body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    /* The Font Family- Really important!! */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    box-sizing: border-box;
+    background-color: #ffffff;
 }
 
-/* reset for images to ensure they ar 100% of the parent container width */
-img {
-    width: 100%;
-}
-
-/* The hero section styling- use your OWN Hero Image URL here */
+/* 2. Hero Section - Your Ferrari Header */
 .hero {
     background-image: url('images/CharlesLeclercFerrari\ Sf-90\ 2020.png');
     height: 25vh;
@@ -23,58 +15,69 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(255, 0, 0);
-    text-align: center;
     position: relative;
 }
 
-/* BIG text styling for the hero section text */
-.hero-text {
-    font-size: 3em;
+/* 3. The Topic Title - That dark bar with your name */
+.topic-title {
+    background-color: rgb(75, 64, 64);
+    color: white;
+    padding: 10px 5%;
+    text-align: left;
+}
+
+.topic-title h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* 4. The Grid - Keeps the 3 cards in a row */
+.topic-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 90%;
+    margin: 50px auto;
+}
+
+/* 5. The Cards - Centering everything inside */
+.topic-card {
+    background-color: rgb(71, 71, 71);
+    border-radius: 15px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centers horizontally */
+    justify-content: center;  /* Centers vertically */
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* 6. The Images - Forcing the tiny car to be big */
+.topic-card img {
+    width: 280px;        /* Forces the tiny car to stretch out */
+    height: 200px;       /* Keeps the 'box' height consistent for all cards */
+    object-fit: contain;  /* Keeps it from looking squished */
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* 7. The Text - Big and bold */
+.topic-card-text {
+    font-size: 2.8em;    /* Bumped up slightly more */
+    color: white;
+    margin: 0;
     font-weight: normal;
 }
 
-/* nice big font on a banner style background */
-.topic-title{
-    color: rgb(255, 0, 0);
-    font-size: 0.8em;
-    padding: 0.5em, 3em;
-    background-color: rgb(75, 64, 64);
-}
-
-/* Three column grid with a nice big gap */
-.topic-content{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6em;
-    /* bring the whole section in off the sides of the page */
-    width: 70%;
-    /* top margin of 3em and center right/left */
-    margin: 3em auto;
-}
-
-/* Styling for the individual topic cards rounded edges background color and a drop shadow */
-.topic-card{
-    background-color: rgb(71, 71, 71);
-    color: white;
-    padding: 1em;
-    border-radius: 0.5em;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Styling for the topic card titles */
-.topic-card-text{
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-    /* center align text */
+/* 8. Footer - Bringing it back from the dead */
+footer {
+    background-color: rgb(255, 0, 0); /* Matches your title bar */
+    color: rgb(255, 255, 255);
     text-align: center;
-}
-
-
-/* Styling for a footer section to take a bit of spcae at the bottom of the page */
-.footer{
-    background-color: rgb(255, 0, 0);
-    color: rgb(255, 0, 0);
-    text-align: right;
-    padding: 3em 3em;
+    padding: 30px 0;
+    margin-top: 50px;    /* Pushes it away from the cards */
+    width: 100%;
+    font-weight: normal;
+    display: block;      /* Ensures it shows up as a block element */
 }
