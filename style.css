@@ -30,8 +30,8 @@ img {
 
 /* BIG text styling for the hero section text */
 .hero-text {
-    font-size: 4em;
-    font-weight: bold;
+    font-size: 3em;
+    font-weight: normal;
 }
 
 /* nice big font on a banner style background */
