@@ -1,4 +1,4 @@
-/* 1. Global Reset - Fixes the overall look */
+
 body {
     margin: 0;
     padding: 0;
@@ -6,10 +6,9 @@ body {
     background-color: #ffffff;
 }
 
-/* 2. Hero Section - Your Ferrari Header */
 .hero {
     background-image: url('images/CharlesLeclercFerrari\ Sf-90\ 2020.png');
-    height: 25vh;
+    height: 28vh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -18,7 +17,7 @@ body {
     position: relative;
 }
 
-/* 3. The Topic Title - That dark bar with your name */
+
 .topic-title {
     background-color: rgb(75, 64, 64);
     color: white;
@@ -31,34 +30,51 @@ body {
     font-size: 2em;
 }
 
-/* 4. The Grid - Keeps the 3 cards in a row */
+
 .topic-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 2fr);
     gap: 30px;
-    width: 90%;
+    width: 80%;
     margin: 50px auto;
 }
 
-/* 5. The Cards - Centering everything inside */
 .topic-card {
     background-color: rgb(71, 71, 71);
-    border-radius: 15px;
+    border-radius: 30px;
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;    /* Centers horizontally */
-    justify-content: center;  /* Centers vertically */
+    align-items: center;    
+    justify-content: center;  
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 50px rgba(255, 255, 255, 0.3);
 }
 
-/* 6. The Images - Forcing the tiny car to be big */
+/* the game*/
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgb(71, 71, 71); 
+    border-radius: 15px;
+    width: fit-content;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
 .topic-card img {
-    width: 280px;        /* Forces the tiny car to stretch out */
-    height: 200px;       /* Keeps the 'box' height consistent for all cards */
-    object-fit: contain;  /* Keeps it from looking squished */
-    margin-bottom: 20px;
+    width: 280px;        
+    height: 200px;       
+    object-fit: contain; 
+    margin-bottom: 100px;
     display: block;
 }
 
