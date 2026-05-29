@@ -53,7 +53,7 @@ body {
 
 /* the game*/
 .game-container {
-    display: flex;
+    display: fixed;
     justify-content: center;
     align-items: center;
     margin: 50px auto;
