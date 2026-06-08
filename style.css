@@ -1,12 +1,12 @@
-
 body {
     margin: 0;
     padding: 0;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: #ffffff;
-    a {
+}
+
+body a {
     color: #51a4db;
-    }
 }
 
 .hero {
@@ -20,7 +20,6 @@ body {
     position: relative;
 }
 
-
 .topic-title {
     background-color: rgb(75, 64, 64);
     color: white;
@@ -33,13 +32,65 @@ body {
     font-size: 2em;
 }
 
+/* ==========================================
+   NEW: TAB CONTAINER & BUTTON STYLES 
+   ========================================== */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 40px auto 10px auto;
+    width: 80%;
+}
 
+.tab-btn {
+    padding: 12px 30px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(71, 71, 71); /* Matches your cards */
+    color: white;
+    font-family: Impact, sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover style */
+.tab-btn:hover {
+    background-color: rgb(100, 100, 100);
+    transform: translateY(-2px);
+}
+
+/* Active tab style (Matches your footer red!) */
+.tab-btn.active {
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
+/* ==========================================
+   NEW: TAB SHOW/HIDE MECHANICS
+   ========================================== */
+/* Hide all tabs by default */
+.tab-content {
+    display: none;
+}
+
+/* Show the active tab block */
+.tab-content.active-content {
+    display: block;
+}
+
+/* ==========================================
+   YOUR ORIGINAL CARD GRID & LAYOUT STYLES
+   ========================================== */
 .topic-content {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     gap: 30px;
     width: 80%;
-    margin: 50px auto;
+    margin: 20px auto 50px auto; /* Reduced top margin slightly for the tabs */
 }
 
 .topic-card {
@@ -51,12 +102,12 @@ body {
     align-items: center;    
     justify-content: center;  
     text-align: center;
-    box-shadow: 0 20px 50px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Adjusted to black tint so it pops on a white background */
 }
 
 /* the game*/
 .game-container {
-    display: fixed;
+    display: flex; /* Changed from fixed to flex for proper centering */
     justify-content: center;
     align-items: center;
     margin: 50px auto;
@@ -72,31 +123,30 @@ iframe {
     border-radius: 10px;
 }
 
-
 .topic-card img {
     width: 280px;        
     height: 200px;       
     object-fit: contain; 
-    margin-bottom: 100px;
+    margin-bottom: 40px; /* Reduced from 100px so it fits closer to the labels */
     display: block;
 }
 
 /* 7. The Text - Big and bold */
 .topic-card-text {
-    font-size: 2.8em;    /* Bumped up slightly more */
+    font-size: 2.8em;
     color: white;
     margin: 0;
     font-weight: normal;
 }
 
-/* 8. Footer - Bringing it back from the dead */
+/* 8. Footer */
 footer {
-    background-color: rgb(255, 0, 0); /* Matches your title bar */
+    background-color: rgb(255, 0, 0); 
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 30px 0;
-    margin-top: 50px;    /* Pushes it away from the cards */
+    margin-top: 50px;
     width: 100%;
     font-weight: normal;
-    display: block;      /* Ensures it shows up as a block element */
+    display: block;
 }

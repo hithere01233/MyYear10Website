@@ -7,65 +7,99 @@
     <link rel="stylesheet" href="style.css">
     <title>Rayyan's Website</title>
 </head>
-<!-- This is the main body of the website- ALL your content goes AFTER the <body> tag and before the </body> tag -->
+
 <body>
 
-    <!-- The Hero Section -------------------------------------------------------------------------------------- -->
     <section class="hero">
         <div class="hero-text"></div>
     </section>
 
-<!-- Topic one ------------------------------------------------------------------------------------------------- -->
-    <!-- The First Topic Section -->
     <section class="topic">
-        <!-- the topic title a big bar with text in it -->
         <div class="topic-title">
-        <p>Charles Leclerc's 2020 Ferrari SF-90</p>
+            <p>Charles Leclerc's 2020 Ferrari SF-90</p>
             <h1>Rayyan Shaikh</h1>
         </div>
-        <!-- now a three column grid of images -->
-        <div class="topic-content">
-            <!-- one "card" which includes an image with a text below it -->
-            <div class="topic-card">
-                <img src="images/{0BCC5C0D-6C0E-47BF-AB95-554FB8BC93F7}.png" alt="change this too!"> 
-                <h2 class="topic-card-text">Blob</h2>
+
+        <div class="tab-container">
+            <button class="tab-btn active" onclick="openTab(event, 'characters')">3D & Characters</button>
+            <button class="tab-btn" onclick="openTab(event, 'vehicles')">Vehicles</button>
+            <button class="tab-btn" onclick="openTab(event, 'games')">Games & Coding</button>
+        </div>
+
+        <div id="characters" class="tab-content active-content">
+            <div class="topic-content">
+                <div class="topic-card">
+                    <img src="images/{0BCC5C0D-6C0E-47BF-AB95-554FB8BC93F7}.png" alt="Blob"> 
+                    <h2 class="topic-card-text">Blob</h2>
+                </div>
+                <div class="topic-card">
+                    <img src="images/{307E39D1-CA33-4FC9-BF64-0AE16AB43718}.png" alt="Man">
+                    <h2 class="topic-card-text">Man</h2>
+                </div>
+                <div class="topic-card">
+                    <img src="images/Hex Dragon.png" alt="Hex Dragon">
+                    <h2 class="topic-card-text">Hex Dragon</h2>
+                </div>
             </div>
-            <div class="topic-card">
-                <img src="images/{307E39D1-CA33-4FC9-BF64-0AE16AB43718}.png" alt="change this too!">
-                <h2 class="topic-card-text">Man</h2>
+        </div>
+
+        <div id="vehicles" class="tab-content">
+            <div class="topic-content">
+                <div class="topic-card">
+                    <img src="images/car.png" alt="Car">
+                    <h2 class="topic-card-text">Car</h2>
+                </div>
             </div>
-            <div class="topic-card">
-                <img src="images/car.png" alt="change this too!">
-                <h2 class="topic-card-text">Car</h2>
+        </div>
+
+        <div id="games" class="tab-content">
+            <div class="topic-content">
+                <div class="topic-card">
+                    <video width="280" height="200" autoplay loop muted playsinline style="object-fit: contain; margin-bottom: 40px; border-radius: 10px;">
+                        <source src="images/hei matau0000-0250.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h2 class="topic-card-text">3D Render</h2>
+                </div>
+                
+                <div class="topic-card">
+                    <img src="images/Grok.png" alt="Grok Academy">
+                    <h2 class="topic-card-text">Grok Academy</h2>
+                </div>
+                
+                <div class="topic-card">
+                    <h2 class="topic-card-text"><a href="https://flippybitandtheattackofthehexadecimalsfrombase16.com/" target="_blank">Flippy Bit!</a></h2>
+                    <img src="images/Animation.gif" alt="Flippy Bit Animation">
+                </div>
             </div>
-        <div class="topic-card">
-                <img src="images/Hex Dragon.png" alt="change this too!">
-                <h2 class="topic-card-text">Hex Dragon</h2>
-
-        </div>
-        <div class="topic-card">
-            <img src="images/Grok.png" alt="change this too!">
-            <h2 class="topic-card-text">Grok Academy</h2>
-        </div>
-
-        </div>
-        <div class="topic-card">
-            <h2 class="topic-card-text"><a href="https://flippybitandtheattackofthehexadecimalsfrombase16.com/">Flippy Bit!</a></h2>
-            <img src="images/Animation.gif" alt="change this too!">
-
-        </div>
-
         </div>
 
     </section>
-<!-- End of topic one------------------------------------------------------------------------------------------ -->
-
-
-    <!-- A Simple Website Footer ------------------------------------------------------------------------------ -->
     <footer class="footer">
         <p>&copy; 2025 My Showcase Website By Rayyan Shaikh</p>
     </footer>
 
-<!-- The end of the whole page- no more content after this! -->
+    <script>
+    function openTab(event, tabId) {
+        // Hide all tab panels
+        const contents = document.querySelectorAll('.tab-content');
+        contents.forEach(content => {
+            content.classList.remove('active-content');
+        });
+
+        // Remove the active visual style from all buttons
+        const buttons = document.querySelectorAll('.tab-btn');
+        buttons.forEach(button => {
+            button.classList.remove('active');
+        });
+
+        // Show the current clicked tab panel
+        document.getElementById(tabId).classList.add('active-content');
+
+        // Make the clicked button look active
+        event.currentTarget.classList.add('active');
+    }
+    </script>
+
 </body>
 </html>
