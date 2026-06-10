@@ -6,7 +6,7 @@ body {
 }
 
 body a {
-    color: #51a4db;
+    color: #0099ff;
 }
 
 .hero {
@@ -32,9 +32,6 @@ body a {
     font-size: 2em;
 }
 
-/* ==========================================
-   NEW: TAB CONTAINER & BUTTON STYLES 
-   ========================================== */
 .tab-container {
     display: flex;
     justify-content: center;
