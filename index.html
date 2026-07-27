@@ -22,8 +22,8 @@
 
         <div class="tab-container">
             <button class="tab-btn active" onclick="openTab(event, 'characters')">Characters</button>
-            <button class="tab-btn" onclick="openTab(event, 'vehicles')">Cars</button>
-            <button class="tab-btn" onclick="openTab(event, 'renders')">Renders</button>
+            <button class="tab-btn" onclick="openTab(event, 'vehicles')">Modelling</button>
+            <button class="tab-btn" onclick="openTab(event, 'renders')">Animation</button>
             <button class="tab-btn" onclick="openTab(event, 'coding')">Coding</button>
         </div>
 
@@ -41,14 +41,21 @@
                     <img src="images/Hex Dragon.png" alt="Hex Dragon">
                     <h2 class="topic-card-text">Hex Dragon</h2>
                 </div>
+                <div class="topic-card">
+                    <img src="images/car.png" alt="Hex Dragon">
+                    <h2 class="topic-card-text">Car</h2>
+                </div>
             </div>
         </div>
 
         <div id="vehicles" class="tab-content">
             <div class="topic-content">
                 <div class="topic-card">
-                    <img src="images/car.png" alt="Car">
-                    <h2 class="topic-card-text">Car</h2>
+                    <video width="280" height="200" autoplay loop muted playsinline style="object-fit: contain; margin-bottom: 40px; border-radius: 10px;">
+                        <source src="images/hei matau0000-0250.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h2 class="topic-card-text">3D Render</h2>
                 </div>
                 <div class="topic-card">
                     <img src="images/car 3d model.png" alt="Car">
@@ -65,13 +72,6 @@
         <div id="renders" class="tab-content">
             <div class="topic-content">
                 <div class="topic-card">
-                    <video width="280" height="200" autoplay loop muted playsinline style="object-fit: contain; margin-bottom: 40px; border-radius: 10px;">
-                        <source src="images/hei matau0000-0250.mkv" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <h2 class="topic-card-text">3D Render</h2>
-                </div>
-                <div class="topic-card">
                     <video width="100%" height="auto" autoplay loop muted playsinline>
                          <source src="images/animation.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -84,6 +84,10 @@
                         Your browser does not support the video tag.
                     </video>
                     <h2 class="topic-card-text">Animation 2</h2>
+                </div>
+                <div class="topic-card">
+                    <img src="images/placeholder-1024x1024.png">
+                    <h2 class="topic-card-text">placeholder</h2>
                 </div>
             </div>
         </div>
